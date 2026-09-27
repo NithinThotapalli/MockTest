@@ -143,4 +143,3 @@ async function start() {
   app.listen(port, () => console.log(`Assessly running at http://localhost:${port}`));
 }
 
-export default app;
