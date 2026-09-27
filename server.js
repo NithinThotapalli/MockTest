@@ -142,18 +142,4 @@ async function start() {
   await connectDatabase();
   app.listen(port, () => console.log(`Assessly running at http://localhost:${port}`));
 }
-async function start() {
-  await connectDatabase();
-  app.listen(port, () => {
-    console.log(`Assessly running at http://localhost:${port}`);
-  });
-}
-
-export { app };
-
-if (process.env.VERCEL !== '1') {
-  start().catch(error => {
-    console.error('Unable to start Assessly:', error);
-    process.exit(1);
-  });
-}
+ export default app;
