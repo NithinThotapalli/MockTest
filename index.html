@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    
+    <section class="auth-panel">
+      <div class="auth-panel-inner">
+        
+
+        <section id="role-choice" class="role-choice">
+          <div class="panel-heading"><h1>Welcome back</h1><p>Choose how you want to sign in.</p></div>
+          <div class="role-cards">
+            <button class="role-card" data-role="student" type="button"><span class="role-icon">S</span><span><strong>Student</strong><small>Take exams and track your progress</small></span><span class="role-arrow">→</span></button>
+            <button class="role-card" data-role="teacher" type="button"><span class="role-icon faculty-icon">F</span><span><strong>Faculty</strong><small>Create and manage question papers</small></span><span class="role-arrow">→</span></button>
+          </div>
+        </section>
+        <section id="login-view" hidden>
+          <button class="back-link" id="back-to-roles" type="button">← Choose another account type</button>
+          <div class="selected-role"><span id="selected-role-label">Student</span> login</div>
+          <div class="panel-heading"><h1>Welcome back</h1><p id="login-description">Sign in to continue your learning journey.</p></div>
+        <form id="login-form" class="stack-form">
+          <label>Username<input id="username" name="username" type="text" autocomplete="username" placeholder="Enter your username" required></label>
+          <label>Password<div class="password-wrap"><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required><button class="password-toggle" type="button" aria-label="Show password">Show</button></div></label>
+          <div class="form-meta"><label class="check-label"><input type="checkbox"> <span>Remember me</span></label><a href="#" onclick="return false">Need help?</a></div>
+          <button class="primary-button full-width" type="submit">Sign in <span>→</span></button>
+          <p class="form-error" id="login-error" role="alert"></p>
+        </form>
+        <p class="student-signup" id="student-signup" hidden>New student? <a href="student-signup.html">Sign up here</a></p>
+
+        </section>
+      </div>
+      <footer class="auth-footer"><span></span><span></span></footer>
+    </section>
+  </main>
+  <div class="auth-loading" id="auth-loading" hidden><div class="auth-loading-card" role="status" aria-live="polite"><span class="auth-spinner"></span><strong id="auth-loading-text">Signing you in...</strong><small>Please wait a moment</small></div></div>
+  <script src="app.js"></script>
+</body>
+</html>

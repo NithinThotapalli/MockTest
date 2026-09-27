@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page signup-page">
+  <main class="auth-shell">
+    <section class="auth-panel">
+      <div class="auth-panel-inner">
+        <div class="auth-brand"><a class="brand" href="index.html"><span class="brand-mark">A</span></a></div>
+        <a class="back-link signup-back" href="index.html">← Back to student login</a>
+        <div class="selected-role">Student account</div>
+        <div class="panel-heading">
+          <h1>Create your account</h1>
+          <p>Sign up as a student to start taking exams.</p>
+        </div>
+        <form id="signup-form" class="stack-form">
+          <label>Full name<input name="name" type="text" autocomplete="name" placeholder="Enter your full name" required></label>
+          <label>Username<input name="username" type="text" autocomplete="username" placeholder="Choose a username" required></label>
+          <label>Password<div class="password-wrap"><input id="signup-password" name="password" type="password" autocomplete="new-password" placeholder="Create a password" required minlength="8"><button class="signup-password-toggle" type="button" aria-label="Show password">Show</button></div></label>
+          <button class="primary-button full-width" type="submit">Create student account <span>→</span></button>
+          <p class="form-error" id="signup-error" role="alert"></p>
+        </form>
+        <p class="auth-switch-copy">Already have an account? <a href="index.html">Sign in</a></p>
+      </div>
+      <footer class="auth-footer"><span></span><span></span></footer>
+    </section>
+  </main>
+  <div class="signup-success-backdrop" id="signup-success" hidden>
+    <section class="signup-success-modal" role="dialog" aria-modal="true" aria-labelledby="signup-success-title">
+      <div class="signup-success-icon">✓</div>
+      <h2 id="signup-success-title">Account created successfully</h2>
+      <p>Your student account is ready. Return to the login page to sign in.</p>
+      <button class="primary-button full-width" id="continue-to-login" type="button">Continue to login <span>→</span></button>
+    </section>
+  </div>
+  <div class="auth-loading" id="auth-loading" hidden><div class="auth-loading-card" role="status" aria-live="polite"><span class="auth-spinner"></span><strong id="auth-loading-text">Creating your account...</strong><small>Please wait a moment</small></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
